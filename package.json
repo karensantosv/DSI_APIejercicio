@@ -6,7 +6,7 @@
   "scripts": {
     "start": "tsc-watch --onSuccess \"node dist/ejercicio-1/exportDocuments.js\"",
     "docs": "typedoc",
-    "test": "vitest run",
+    "test": "vitest run --no-file-parallelism",
     "coverage": "vitest run --coverage --coverage.include=src/*/* --coverage.include=src/* --no-file-parallelism"
   },
   "repository": {
