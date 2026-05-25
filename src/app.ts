@@ -1,12 +1,11 @@
 import express from "express";
 import "./db/mongoose.js";
-import { Trail } from "./models/traildocument.js";
+import { userRouter } from "./routers/userRouter.js";
+import { tvshowRouter } from "./routers/tvshowRouter.js";
 import { defaultRouter } from "./routers/default.js";
-import { trailRoute } from "./routers/trailRouter.js"
 
 export const app = express();
-
 app.use(express.json());
-
-app.use(trailRoute);
+app.use(userRouter);
+app.use(tvshowRouter);
 app.use(defaultRouter);
