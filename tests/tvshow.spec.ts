@@ -173,7 +173,9 @@ describe("test /user", () => {
             .delete(`/series/${idTv}`)
             .send()
             .expect(200)
-            // console.log(r.body)
+            console.log(r.body)
+
+            expect(r.body.name).toBe(tv.name)
         });
     });
 });
